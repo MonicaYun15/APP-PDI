@@ -1,0 +1,24 @@
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="bahia">Nombre de la Bahía:</label>
+    <input id="bahia" formControlName="bahia" placeholder="Nombre de la bahía" />
+  </div>
+  <div>
+    <label for="vin">VIN:</label>
+    <input id="vin" formControlName="vin" placeholder="VIN" />
+  </div>
+  <div>
+    <label for="horaEntrada">Hora de entrada:</label>
+    <input id="horaEntrada" formControlName="horaEntrada" placeholder="Hora de entrada"  />
+  </div>
+  <div>
+    <label for="horaSalida">Hora de salida:</label>
+    <input id="horaSalida" formControlName="horaSalida" placeholder="Hora de salida"  />
+  </div>
+
+  <button type="button" (click)="onVinScanned()">
+    {{ getButtonText() }}
+  </button>
+
+  <button type="submit" [disabled]="registroForm.invalid" (click)="redirectTo()">Enviar</button>
+</form>

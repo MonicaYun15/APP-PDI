@@ -1,0 +1,47 @@
+/* Contenedor de los botones */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Mayor separación para evitar errores de toque */
+  padding: 20px 40px;
+}
+
+/* Estilo general de los botones */
+.button {
+  background-color: #e6e6e6;
+  border: none;
+  color: rgb(95, 95, 95);
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+  height: 100px;
+  touch-action: manipulation;
+  user-select: none;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.button:active {
+  background-color: #357ab8;
+  transform: scale(0.97);
+}
+
+.buttons button:nth-child(-n+3) {
+  flex: 1 1 calc(30% - 20px);
+}
+
+.buttons button:nth-child(n+4) {
+  flex: 1 1 calc(40% - 20px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  color: #333;
+}
+
