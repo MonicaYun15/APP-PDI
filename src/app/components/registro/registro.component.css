@@ -37,7 +37,7 @@ button {
   width: 100%;
   padding: 14px;
   margin-top: 10px;
-  background-color: #0078d4;
+  background-color: #ffb300;
   color: white;
   font-size: 18px;
   border: none;
@@ -52,5 +52,5 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background-color: #005ea6;
+  background-color: #cf9100;
 }

@@ -1,6 +1,6 @@
 export interface Registro {
-  bahia: string;
-  vin: string;
-  horaEntrada: string;
-  horaSalida: string;
+  tx_Proceso: string;
+  nu_job: string;
+  ts_Hora_Entrada: string;
+  ts_Hora_Salida: string;
 }

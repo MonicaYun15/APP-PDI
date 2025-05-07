@@ -45,3 +45,8 @@ h1 {
   color: #333;
 }
 
+#imglogo {
+  width: 500px;  /* Cambia este valor según lo necesites */
+  height: auto;  /* Mantiene la proporción */
+}
+
