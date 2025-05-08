@@ -1,25 +1,20 @@
 <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="bahia">Nombre de la Bahía:</label>
+  <div class="Bahia">
+    <button type="button" (click)="redirectTo()">Cambiar</button>
     <input id="bahia" formControlName="bahia" placeholder="Nombre de la bahía" />
   </div>
+ 
   <div>
-    <label for="vin">VIN:</label>
-    <input id="vin" formControlName="vin" placeholder="VIN" />
+    <input #vin id="vin" formControlName="vin" placeholder="Escanea el VIN" autofocus />
+ 
   </div>
   <div>
-    <label for="horaEntrada">Hora de entrada:</label>
-    <input id="horaEntrada" formControlName="horaEntrada" placeholder="Hora de entrada"  />
+    <input id="horaEntrada" formControlName="horaEntrada" placeholder="Hora de entrada" />
   </div>
   <div>
-    <label for="horaSalida">Hora de salida:</label>
-    <input id="horaSalida" formControlName="horaSalida" placeholder="Hora de salida"  />
+    <input id="horaSalida" formControlName="horaSalida" placeholder="Hora de salida" />
   </div>
-
-  <button type="button" (click)="onVinScanned()">
-    {{ getButtonText() }}
-  </button>
-
-  <button type="submit" [disabled]="registroForm.invalid">Enviar</button>
-
+ 
+  <button type="button" (click)="onVinScanned()">Escanear VIN</button>
 </form>
+ 

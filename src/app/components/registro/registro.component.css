@@ -1,17 +1,32 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa todo el alto visible */
+  width: 100vw;
+  background-color: #f0f0f0;
+}
+
 form {
+  width: 90%;
   max-width: 500px;
-  margin: 40px auto;
   padding: 24px;
   background-color: #f5f5f5;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Cada línea del formulario */
 form div {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+/* Etiquetas opcionales */
 label {
   display: block;
   margin-bottom: 6px;
@@ -19,38 +34,55 @@ label {
   font-size: 16px;
 }
 
+/* Inputs responsivos */
 input {
-  width: 100%;
+  flex: 1;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
   box-sizing: border-box;
+  min-width: 0;
 }
 
+/* Inputs deshabilitados */
 input:disabled {
   background-color: #e0e0e0;
   color: #555;
 }
 
+/* Botones de mismo tamaño */
 button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 12px 20px;
   background-color: #ffb300;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  white-space: nowrap;
+  width: 160px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
+/* Botón deshabilitado */
 button:disabled {
   background-color: #a0a0a0;
   cursor: not-allowed;
 }
 
+/* Hover */
 button:hover:not(:disabled) {
   background-color: #cf9100;
+}
+
+/* Botón invisible usado como espaciador */
+#espaciador {
+  visibility: hidden;
+  border: none;
+  background: none;
+  width: 160px;
+  height: 40px;
 }
