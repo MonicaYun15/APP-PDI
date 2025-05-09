@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RegistroService } from '../../services/registro.service';
+import { environment } from '../../../environments/environment.prod';
  
 @Component({
   selector: 'app-registro',
@@ -112,9 +113,9 @@ export class RegistroComponent implements OnInit {
       const datosOriginales = this.registroForm.getRawValue();
       const datos = {
         nu_job: datosOriginales.vin,
-        tx_Proceso: datosOriginales.bahia,
-        ts_Hora_Entrada: datosOriginales.horaEntrada,
-        ts_Hora_Salida: datosOriginales.horaSalida
+        tx_proceso: datosOriginales.bahia,
+        ts_hora_entrada: datosOriginales.horaEntrada,
+        ts_hora_salida: datosOriginales.horaSalida
       };
       this.registroService.guardarRegistro(datos).subscribe({
         next: () => {

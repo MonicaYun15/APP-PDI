@@ -1,6 +1,6 @@
 export interface Registro {
-  tx_Proceso: string;
+  tx_proceso: string;
   nu_job: string;
-  ts_Hora_Entrada: string;
-  ts_Hora_Salida: string;
+  ts_hora_entrada: string;
+  ts_hora_salida: string;
 }
